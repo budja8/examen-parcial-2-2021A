@@ -15,8 +15,7 @@ public class Main {
         SongPlayer songPlayer = new SongPlayer();
         Song song = new Song(new File(fileName));
 
-        //Instrument instrument = InstrumentFactory.getInstrument(instrumento);
-        Instrument instrument = new Piano();
+        Instrument instrument = instrumento.getInstrument();
 
         songPlayer.play(song, instrument);
 
