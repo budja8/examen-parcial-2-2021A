@@ -3,26 +3,17 @@ package uaslp.ingenieria.exams;
 import uaslp.ingenieria.exams.instruments.*;
 
 import java.util.Iterator;
+import java.util.List;
 
 public class SongPlayer {
 
-    public void play(Song song, Instrumento instrumento) {
-
-        Iterator<Nota> notas = song.getSongIterator();
-        Piano piano = new Piano();
-        Guitarra guitarra = new Guitarra();
-        Violin violin = new Violin();
-        Flauta flauta = new Flauta();
+    public void play(Song song, List<Instrument> instrumentList) {
+        Iterator<Note> notas = song.getSongIterator();
 
         while (notas.hasNext()) {
-            Nota nota = notas.next();
-
-            switch (instrumento) {
-                case PIANO -> piano.presionaTecla(nota);
-                case FLAUTA -> flauta.sopla(nota);
-                case VIOLIN -> violin.toca(nota);
-                case GUITARRA -> guitarra.tocaCuerda(nota);
-                default -> System.out.println("Instrumento no soportado");
+            Note nota = notas.next();
+            for(Instrument instrument : instrumentList){
+                instrument.play(nota);
             }
         }
 

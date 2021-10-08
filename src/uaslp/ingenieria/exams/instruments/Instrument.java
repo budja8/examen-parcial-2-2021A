@@ -2,10 +2,9 @@ package uaslp.ingenieria.exams.instruments;
 
 import uaslp.ingenieria.exams.Note;
 
-public class Piano extends Instrument {
+public abstract class Instrument {
 
     public void play(Note note){
-        System.out.println("Sonido de piano.");
+        System.out.println("Instrumento sin definir.");
     }
-
 }

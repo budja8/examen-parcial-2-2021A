@@ -1,15 +1,15 @@
 package uaslp.ingenieria.exams;
 
-public final class Nota {
-    private int nota;
+public final class Note {
+    private int note;
     private int tempo;
 
-    public int getNota() {
-        return nota;
+    public int getNote() {
+        return note;
     }
 
-    public void setNota(int nota) {
-        this.nota = nota;
+    public void setNote(int nota) {
+        this.note = nota;
     }
 
     public int getTempo() {
